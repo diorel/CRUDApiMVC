@@ -1,0 +1,52 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+}
+
+
+<h2>Index</h2>
+
+<div align = "center" >
+    <a href = "@Url.Action("Create","Cliente")">Add New Customer</a> 
+    <br/> 
+    <br/>
+
+<table cellpadding = "2" class = "table" cellspacing = "2" border = "1" >
+<tr class = "btn-primary" >
+<th>IdRegistro</th> 
+<th>Nombre</th> 
+<th>Apellido</th> 
+<th>Modelo</th> 
+<th>Correo</th> 
+<th>Placas</th>  
+</tr>
+@foreach(var Cust in ViewBag.listRegistroPlacas)
+{ 
+<tr class="btn-success">
+    <td>
+        @Cust.IdRegistro
+    </td>
+    <td>
+        @Cust.Nombre
+    </td>
+    <td>
+        @Cust.Apellido
+    </td>
+    <td>
+        @Cust.Modelo
+    </td>
+    <td>
+        @Cust.Correo
+    </td>
+    <td>
+        @Cust.Placas
+    </td>
+
+    <td>
+        <a onclick="return confirm('Do you want to Delete?')" href="@Url.Action("Delete","Cliente",new {id= Cust.IdRegistro})">Delete</a> ||<a href="@Url.Action("Edit","Cliente",new {id = Cust.IdRegistro})">Edit</a>
+    </td>
+</tr>
+    } 
+    </table> 
+    </div>
+

@@ -4,7 +4,7 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="1429b6e98d724cd2a9483a31c777a62b" Name="Diagram1">
+      <Diagram DiagramId="b93b6e9e6ed04ee2b32af1643a99d504" Name="Diagram1">
         <EntityTypeShape EntityType="AutoLavadoModel.RegistroPlacas" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
       </Diagram>
     </edmx:Diagrams>

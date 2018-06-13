@@ -12,6 +12,8 @@ namespace ClienteWebMVC.Models
 {
     public class RegistroPlacasClient
     {
+
+        // nueva url http://localhost:22703/api/RegistroPlacas
         private string Base_URL = "http://localhost:22703/api/";
 
 
@@ -27,8 +29,9 @@ namespace ClienteWebMVC.Models
             {
                 HttpClient client = new HttpClient();
                 client.BaseAddress = new Uri(Base_URL);
+                //client.BaseAddress = new Uri("http://localhost:22703/api/RegistroPlacas");
                 client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
-                HttpResponseMessage response = client.GetAsync("registrosplacas").Result;
+                HttpResponseMessage response = client.GetAsync("RegistroPlacas").Result;
 
                 if (response.IsSuccessStatusCode)
                 {

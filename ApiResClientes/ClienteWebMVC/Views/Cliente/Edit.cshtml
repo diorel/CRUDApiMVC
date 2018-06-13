@@ -1,0 +1,63 @@
+﻿@{
+    ViewBag.Title = "Edit";
+}
+
+@model ClienteWebMVC.ViewModel.RegistroPlacasViewModel
+
+    <h2>Edit</h2> 
+<div align = "center" width ="500px">
+@using (Html.BeginForm("Edit", "Cliente", FormMethod.Post))
+{
+    <table class="table" width="400px" cellpadding = "20">
+    <tr class = "btn-default">
+    <td>
+    @Html.LabelFor(model => model.registroplacas.Nombre) 
+    </td>
+    <td>
+    @Html.TextBoxFor(model => model.registroplacas.Nombre) 
+   </td> 
+   </tr> 
+   <tr>
+   <td>
+    @Html.LabelFor(model => model.registroplacas.Apellido) 
+   </td>
+    <td>
+    @Html.TextBoxFor(model => model.registroplacas.Apellido) 
+   </td> 
+   </tr> 
+   <tr>
+   <td>
+    @Html.LabelFor(model => model.registroplacas.Modelo) 
+   </td>
+   <td>
+    @Html.TextBoxFor(model => model.registroplacas.Modelo) 
+   </td> 
+   </tr>
+   <tr>
+   <td>
+    @Html.LabelFor(model => model.registroplacas.Correo)
+   </td>
+   <td>
+    @Html.TextBoxFor(model => model.registroplacas.Correo) 
+   </td> 
+   </tr> 
+   <tr>
+   <td>
+    @Html.LabelFor(model => model.registroplacas.Placas)
+    </td>
+    <td>
+    @Html.TextBoxFor(model => model.registroplacas.Placas) 
+   </td> 
+   </tr>
+   <tr>
+    <td>
+   </td>
+    <td>
+    <input type="submit" value="Save"/> &nbsp;<a class="btn-primary" href="@Url.Action("Index","Cliente")">Back</a>
+    @Html.HiddenFor(model => model.registroplacas.IdRegistro) 
+   </td> 
+   </tr>
+   </table>
+    } 
+    </div>
+
